@@ -1,0 +1,36 @@
+function pattern(n){
+if(n==""|| n==" "){
+  console.log("No value to display");
+  return
+}
+var arr=n.split("")
+var mid=Math.ceil(n.length/2)
+let y = n.length;
+            let x = n.length;
+
+            let str = "";
+
+            for(let i = 0; i < y; i++ ){
+              num=mid-1
+                for(let j = 0; j <= x; j++){
+                if(num===n.length){
+                  num=0
+                }
+                
+                    if(i + j >= y){
+                        str = str.concat(arr[num]);
+                        num++;
+                    }else{
+                        str = str.concat(" ")
+                    }
+                    
+                }
+                str = str.concat("\n")
+            }
+
+           
+
+console.log(str);
+
+}
+pattern("WELCOME")
